@@ -34,7 +34,7 @@
       background-color: $color-white;
     }
   }
-  
+
   &::after {
     content: '';
     position: absolute;
@@ -46,10 +46,33 @@
     border-radius: 10rem;
     z-index: -1;
     transition: all 0.4s;
-  }    
-  
+  }
+
   &--animated {
     animation: moveInButton 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    color: $color-primary;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    font-size: $default-font-size;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
   }
 }
